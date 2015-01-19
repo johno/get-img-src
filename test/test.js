@@ -18,7 +18,8 @@ describe('get-img-src', function() {
   });
 
   it('should return multiple img src attributes within single quotes when they exist', function(done) {
-    getImgSrc('<img class="foo" src=\'some-image.jpg\'></img><img class="foo" src="some-other-image.jpg"></img>', function(err, srcs) {
+    getImgSrc('<img class="foo" src=\'some-image.jpg\'></img>' +
+              '<img class="foo" src="some-other-image.jpg"></img>', function(err, srcs) {
       assert.deepEqual(srcs, ['some-image.jpg', 'some-other-image.jpg']);
       done();
     });

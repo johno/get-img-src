@@ -14,15 +14,15 @@
     "type": "git",
     "url": "https://github.com/johnotander/get-img-src.git"
   },
-  "keywords": [
-
-  ],
+  "keywords": [],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/johnotander/get-img-src/issues"
   },
   "homepage": "https://github.com/johnotander/get-img-src",
-  "dependencies": {},
+  "dependencies": {
+    "jsdom": "^3.0.0"
+  },
   "devDependencies": {
     "mocha": "*"
   }

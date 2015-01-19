@@ -12,8 +12,11 @@ npm install --save get-img-src
 
 ## Usage
 
-```bash
-// ...
+```javascript
+var getImgSrc = require('get-img-src');
+
+getImgSrc('<img src="some-image.jpg"></img>');   // => [some-image.jpg]
+getImgSrc('<span>HTML without an image</span>'); // => []
 ```
 
 ## License

@@ -2,7 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/johnotander/get-img-src.png?branch=master)](https://travis-ci.org/johnotander/get-img-src)
 
-Get image src urls from HTML.
+Get image src attributes/urls from HTML.
 
 ## Installation
 
@@ -17,7 +17,7 @@ var getImgSrc = require('get-img-src');
 
 getImgSrc('<img src="some-image.jpg"></img>', function(err, imgSrcs) {
   console.log(imgSrcs);
-});   // => [some-image.jpg]
+}); // => [some-image.jpg]
 
 getImgSrc('<span>HTML without an image</span>', function(err, imgSrcs) {
   console.log(imgSrcs);

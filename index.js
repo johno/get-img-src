@@ -16,7 +16,9 @@ module.exports = function getImgSrc(html, callback) {
       var imgs = window.document.querySelectorAll('img');
 
       [].slice.call(imgs).forEach(function(img) {
-        imgSrcs.push(img.getAttribute('src'));
+        if (img.getAttribute('src')) {
+          imgSrcs.push(img.getAttribute('src'));
+        }
       });
 
       callback(errors, imgSrcs);

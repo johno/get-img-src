@@ -15,9 +15,9 @@ npm install --save get-img-src
 ```javascript
 var getImgSrc = require('get-img-src');
 
-getImgSrc('<img src="some-image.jpg"></img>', function(err, imgSrcs) {
+getImgSrc('<img src="some-img.png"></img> <img src="some-other-img.jpg"></img>', function(err, imgSrcs) {
   console.log(imgSrcs);
-}); // => [some-image.jpg]
+}); // => ['some-img.png', 'some-other-img.jpg']
 
 getImgSrc('<span>HTML without an image</span>', function(err, imgSrcs) {
   console.log(imgSrcs);

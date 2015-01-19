@@ -28,6 +28,10 @@ getImgSrc('<span>HTML without an image</span>', function(err, imgSrcs) {
 
 MIT
 
+## Thanks to the following
+
+* <https://github.com/tmpvar/jsdom>
+
 ## Contributing
 
 1. Fork it

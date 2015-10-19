@@ -1,20 +1,29 @@
 {
   "name": "get-img-src",
   "description": "Get image src attributes/urls from HTML.",
-  "author": "John Otander",
   "version": "0.0.2",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
+  "author": {
+    "name": "John Otander",
+    "email": "johnotander@gmail.com",
+    "url": "johnotander.com"
   },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
-    "test": "mocha test"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/johnotander/get-img-src.git"
   },
-  "keywords": [],
+  "keywords": [
+    "html",
+    "src",
+    "images",
+    "img"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/johnotander/get-img-src/issues"
@@ -22,10 +31,9 @@
   "homepage": "https://github.com/johnotander/get-img-src",
   "dependencies": {
     "cheerio": "^0.19.0",
-    "is-present": "^1.0.0",
-    "jsdom": "^3.0.0"
+    "is-present": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "ava": "*"
   }
 }

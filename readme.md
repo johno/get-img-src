@@ -26,9 +26,9 @@ getImgSrc('<span>HTML without an image</span>', function(err, imgSrcs) {
 
 MIT
 
-## Thanks to the following
+## Acknowledgements
 
-* <https://github.com/tmpvar/jsdom>
+* <https://github.com/cheeriojs/cheerio>
 
 ## Contributing
 

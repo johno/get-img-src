@@ -1,7 +1,7 @@
 {
   "name": "get-img-src",
   "description": "Get image src attributes/urls from HTML.",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "author": {
     "name": "John Otander",
     "email": "johnotander@gmail.com",

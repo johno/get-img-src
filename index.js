@@ -1,27 +1,24 @@
-'use strict';
+'use strict'
 
-var jsdom = require('jsdom');
+var cheerio = require('cheerio')
+var isPresent = require('is-present')
 
-module.exports = function getImgSrc(html, callback) {
+module.exports = function getImgSrc (html) {
   if (typeof html != 'string') {
-    throw new Error('get-img-src expects an HTML string');
+    throw new Error('get-img-src expects an HTML string')
   }
 
-  var imgSrcs = [];
-  callback = callback || function() {};
+  var $ = cheerio.load(html)
 
-  jsdom.env({
-    html: html,
-    done: function(errors, window) {
-      var imgs = window.document.querySelectorAll('img');
+  var imgSrcs = []
 
-      [].slice.call(imgs).forEach(function(img) {
-        if (img.getAttribute('src')) {
-          imgSrcs.push(img.getAttribute('src'));
-        }
-      });
+  $('img').each(function () {
+    var imgSrc = $(this).attr('src')
 
-      callback(errors, imgSrcs);
+    if (isPresent(imgSrc)) {
+      imgSrcs.push(imgSrc)
     }
-  });
+  })
+
+  return imgSrcs
 }

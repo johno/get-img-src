@@ -1,6 +1,4 @@
-# get-img-src
-
-[![Build Status](https://secure.travis-ci.org/johnotander/get-img-src.png?branch=master)](https://travis-ci.org/johnotander/get-img-src)
+# get-img-src [![Build Status](https://secure.travis-ci.org/johnotander/get-img-src.png?branch=master)](https://travis-ci.org/johnotander/get-img-src) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 Get image src attributes/urls from HTML.
 
@@ -13,15 +11,15 @@ npm install --save get-img-src
 ## Usage
 
 ```javascript
-var getImgSrc = require('get-img-src');
+var getImgSrc = require('get-img-src')
 
 getImgSrc('<img src="some-img.png"></img> <img src="some-other-img.jpg"></img>', function(err, imgSrcs) {
-  console.log(imgSrcs);
-}); // => ['some-img.png', 'some-other-img.jpg']
+  console.log(imgSrcs)
+}) // => ['some-img.png', 'some-other-img.jpg']
 
 getImgSrc('<span>HTML without an image</span>', function(err, imgSrcs) {
-  console.log(imgSrcs);
-}); // => []
+  console.log(imgSrcs)
+}) // => []
 ```
 
 ## License
@@ -42,4 +40,6 @@ MIT
 
 Crafted with <3 by John Otander ([@4lpine](https://twitter.com/4lpine)).
 
-This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).
+***
+
+> This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).
